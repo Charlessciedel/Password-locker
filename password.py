@@ -42,3 +42,34 @@ class Credentials:
         Function to save credentials
         """
         Credentials.credentials_list.append(self)
+
+        @classmethod
+    def find_by_name(cls,name):
+        """
+        Function that takes a the name of an account and returns the account object
+        """
+        for account in cls.credentials_list:
+            if account.account_name == name:
+                return account
+
+    @classmethod
+    def generate_password(stringLength = 10):
+        """
+        Function to generate password
+        """
+        chars = string.ascii_uppercase + string.ascii_lowercase + string.digits
+        size = 8
+        return ''.join(random.choice(chars) for x in range(size,20))
+
+    @classmethod
+    def display_credentials(cls):
+        """
+        Function to display accounts and their credentials
+        """
+        return cls.credentials_list
+
+    def delete_credentials(self):
+        """
+        Function to delete account credentials
+        """
+        Credentials.credentials_list.remove(self)
