@@ -28,10 +28,10 @@ def save_credential(account):
     """
     account.save_credentials()
 
-# def generate_password():
-#     """
-#     Function to create a password automatically
-#     """
-#     password = Credentials.generate_password()
-#     return password
+def generate_password():
+    """
+    Function to create a password automatically
+    """
+    password = Credentials.generate_password()
+    return password
 
