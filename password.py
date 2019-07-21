@@ -37,13 +37,13 @@ class Credentials:
         self.username = username
         self.password = password
 
-        def save_credentials(self):
+    def save_credentials(self):
         """
         Function to save credentials
         """
         Credentials.credentials_list.append(self)
 
-        @classmethod
+    @classmethod
     def find_by_name(cls,name):
         """
         Function that takes a the name of an account and returns the account object
