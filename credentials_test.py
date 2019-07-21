@@ -37,6 +37,26 @@ class TestCredentials(unittest.TestCase):
         Test for saving multiple credentials
         """
         self.new_credentials.save_credentials()
-        test_credentials = Credentials("AllFootball","Kibet","messithegoat")
+        test_credentials = Credentials("Heavenly","Angels","Boatross")
         test_credentials.save_credentials()
         self.assertEqual(len(Credentials.credentials_list),2)
+
+    def test_view_credentials(self):
+        """
+        Test to view an account credential
+        """
+        self.assertEqual(Credentials.display_credentials(),Credentials.credentials_list)
+
+    def test_delete_credentials(self):
+        """
+        Test to delete account credentials
+        """
+        self.new_credentials.save_credentials()
+        test_credentials = Credentials("EAsport","Striker4","makesmewonder")
+        test_credentials.save_credentials()
+        self.new_credentials.delete_credentials()
+        self.assertEqual(len(Credentials.credentials_list),1)
+
+
+if __name__ == '__main__':
+    unittest.main()    
