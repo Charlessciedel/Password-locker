@@ -3,7 +3,7 @@
 Charles Schiedel
 
 # PASSWORD LOCKER
-This is a Python app that allows the user to save his or her passwords to their various accounts. The app can also generate random uique passwords for the user.
+This is a Python app that allows the user to save his or her passwords to their various accounts. The app can also generate random unique passwords for the user.
 
 ## Description
 This is an app that allows users to store account credentials, create new accounts and store their credentials, they can also delete those credentials.
